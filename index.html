@@ -317,10 +317,7 @@ var btnGuarDatos=$("#btnGuarDatos");
     }	
     
         function obtenerMarcas(){
-	  var opciones={maximumAge:500000,enableHighAccuracy:true,timeout:5000};
-	  navigator.geolocation.getCurrentPosition(exito, falla, opciones);
-	  if(navigator.geolocation){	
-	    function exito(posic){	      	      	         	     
+	 	      	      	         	     
 	      $.ajax({
 		type:"POST",
 		url:"http://martha13valadez.260mb.net/consultaBD.php",
@@ -342,15 +339,9 @@ var btnGuarDatos=$("#btnGuarDatos");
 	      }
 	    }
 	 }
-	    function falla(error){
-	      alert("Error en el servicio Geolocalizador");
-	      dibujarMarcas(defaultPos);
-	    }
+	    
 	  	      
-	    }else{
-	      dibujarMarcas(defaultPos);
-	    }
-	}
+	  
                 
     
 function dibujarMarcas(nombre, municipio, direccion, giro, fotografia, altitud, latitud){//habilitar esta función
